@@ -2,7 +2,6 @@
 
 *{
     font-family: 'poppins',  sans-serif;
-
 }
 
 body{
@@ -16,7 +15,7 @@ body{
 
 .container{
     position: relative;
-    
+
 }
 
 .container .card{
@@ -40,7 +39,11 @@ body{
     transition: 0.5s ease-in-out;
 }
 
-.containeer .card:after{
+.container .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after{
     content: 'nike';
     position: absolute;
     top: 30%;
@@ -63,7 +66,7 @@ body{
 
 .container .card:hover .imgBx{
     top: 0%;
-    transform: translateY(-50%);
+    transform: translateY(0%);
 }
 
 .container .card .imgBx img{
@@ -84,11 +87,11 @@ body{
     z-index: 10;
 }
 
-.containear .card:hover .contextBx{
+.container .card:hover .contentBx{
     height: 210px;
 }
 
-.container .card .contextBx h2{
+.container .card .contentBx h2{
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
@@ -108,13 +111,13 @@ body{
     padding-bottom: 0;
 }
 
-.container .card:hover .contentBx.size{
+.container .card:hover .contentBx .size{
     opacity: 1;
     visibility: visible;
     transition-delay: 0.5s;
 }
 
-.containern.card:hover .contentBx .color{
+.container .card:hover .contentBx .color{
     opacity: 1;
     visibility: visible;
     transition-delay: 0.6s;
@@ -123,12 +126,13 @@ body{
 .container .card .contentBx .size h3, .container .card .contentBx .color h3{
     color: #fff;
     font-weight: 300;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-right: 10px;
 }
 
-.container .card .contentBx .size{
+.container .card .contentBx .size span{
     width: 26px;
     height: 26px;
     text-align: center;
@@ -144,7 +148,20 @@ body{
     cursor: pointer;
 }
 
-.container .card .contentBx.color span:nth-child(2){
+.container .card .contentBx .size span:hover{
+    background: #9bdc28;
+}
+
+.container .card .contentBx span{
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2){
     background: #6781f7;
 }
 
@@ -152,13 +169,13 @@ body{
     background: #04d361;
 }
 
-.containear .card .contentBx .color span:nth-child(4){
+.container .card .contentBx .color span:nth-child(4){
     background: #865bd6;
 }
 
 .container .card .contentBx a{
     display: inline-block;
-    padding: 10px;
+    padding: 10px 20px;
     background: #fff;
     border-radius: 4px;
     margin-top: 10px;
